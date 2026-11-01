@@ -1,0 +1,3105 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lafia Farihatun Nihayah — Portofolio Pribadi</title>
+    <meta name="description"
+        content="Portofolio resmi Lafia Farihatun Nihayah - Mahasiswa S1 Pendidikan Matematika Universitas Negeri Malang.">
+
+    <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Brand Palette: Warm Linen & Editorial Navy */
+            --bg-main: #fbf9f5;
+            --bg-surface: #ffffff;
+            --bg-card: #ffffff;
+            --bg-subtle: #f2ede4;
+            --bg-accent-soft: #e8f0f8;
+
+            --primary: #183756;
+            --primary-hover: #0e243a;
+            --primary-light: #2c567e;
+            --accent: #2563eb;
+
+            --text-primary: #152434;
+            --text-secondary: #4a5d73;
+            --text-muted: #7b8e9f;
+
+            --border-light: #e5dfd5;
+            --border-focus: #183756;
+
+            --shadow-xs: 0 1px 3px rgba(24, 55, 86, 0.04);
+            --shadow-sm: 0 3px 10px rgba(24, 55, 86, 0.06);
+            --shadow-md: 0 10px 28px -4px rgba(24, 55, 86, 0.09);
+            --shadow-lg: 0 20px 40px -8px rgba(24, 55, 86, 0.14);
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-full: 9999px;
+
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-size: 14.5px;
+            line-height: 1.65;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* SISTEM TAB/MENU: HANYA 1 HALAMAN TAMPIL TANPA SCROLL PANJANG */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .page {
+            display: none !important;
+            width: 100%;
+            flex: 1;
+        }
+
+        .page.active {
+            display: block !important;
+            animation: tabFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .hero.page.active {
+            display: flex !important;
+        }
+
+        @keyframes tabFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* SECTION & CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 65px 0 85px;
+            position: relative;
+        }
+
+        .section-header {
+            margin-bottom: 44px;
+        }
+
+        .eyebrow-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11.5px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--bg-accent-soft);
+            padding: 5px 14px;
+            border-radius: var(--radius-full);
+            margin-bottom: 14px;
+        }
+
+        .eyebrow-tag::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: clamp(28px, 3.4vw, 38px);
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            max-width: 680px;
+            color: var(--text-secondary);
+            font-size: 14.5px;
+            line-height: 1.65;
+        }
+
+        /* BUTTONS */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            border-radius: var(--radius-full);
+            background: var(--primary);
+            color: #ffffff;
+            padding: 12px 24px;
+            font-size: 13.5px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(24, 55, 86, 0.2);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .button:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(24, 55, 86, 0.28);
+            color: #ffffff;
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button-secondary {
+            background: #ffffff;
+            color: var(--primary);
+            border: 1.5px solid var(--border-light);
+            box-shadow: var(--shadow-xs);
+        }
+
+        .button-secondary:hover {
+            background: #ffffff;
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .button-sm {
+            padding: 8px 16px;
+            font-size: 12.5px;
+        }
+
+        /* STICKY HEADER & NAVBAR */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(251, 249, 245, 0.92);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(229, 223, 213, 0.8);
+        }
+
+        .navbar {
+            width: 90%;
+            max-width: 1140px;
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary);
+            letter-spacing: -0.3px;
+        }
+
+        .logo-badge {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: #ffffff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 3px 10px rgba(24, 55, 86, 0.18);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 4px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(229, 223, 213, 0.7);
+        }
+
+        nav a {
+            padding: 8px 18px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-radius: var(--radius-full);
+            transition: all 0.25s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        nav a.active {
+            color: #ffffff;
+            background: var(--primary);
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(24, 55, 86, 0.18);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            color: var(--primary);
+            font-size: 24px;
+            cursor: pointer;
+            padding: 6px;
+            line-height: 1;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(180deg, #fbf9f5 0%, #edf3f8 100%);
+            min-height: calc(88vh - 72px);
+            display: flex;
+            align-items: center;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(198, 221, 236, 0.45) 0%, rgba(251, 249, 245, 0) 70%);
+            top: -120px;
+            right: -100px;
+            pointer-events: none;
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            width: 90%;
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-greeting {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: var(--accent);
+            margin-bottom: 16px;
+            background: rgba(37, 99, 235, 0.08);
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: clamp(34px, 4.4vw, 54px);
+            line-height: 1.15;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--primary-light);
+        }
+
+        .hero .description {
+            max-width: 540px;
+            font-size: 15.5px;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: 30px;
+        }
+
+        .hero-cta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            justify-self: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .hero-image-backdrop {
+            position: absolute;
+            inset: -12px -12px 12px 12px;
+            border-radius: 28px;
+            background: linear-gradient(135deg, #c4daf0 0%, #d8e5f2 100%);
+            z-index: 0;
+            transform: rotate(-2deg);
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 4 / 4.8;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 10px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .floating-pill {
+            position: absolute;
+            bottom: -14px;
+            left: 20px;
+            z-index: 2;
+            background: #ffffff;
+            padding: 10px 18px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(24, 55, 86, 0.12);
+            border: 1px solid var(--border-light);
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .floating-pill-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            background: var(--bg-main);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .about-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px 22px;
+            box-shadow: var(--shadow-xs);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.25);
+        }
+
+        .about-card-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--bg-subtle);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 18px;
+        }
+
+        .biodata-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 13px;
+        }
+
+        .biodata-item label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .biodata-item span {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .about-card p {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            margin-top: 6px;
+        }
+
+        .skill-tags li {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--primary);
+            background: var(--bg-subtle);
+            padding: 6px 12px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(24, 55, 86, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .skill-tags li:hover {
+            background: var(--bg-accent-soft);
+            color: var(--accent);
+        }
+
+        /* EDUCATION SECTION */
+        .education-section {
+            background: linear-gradient(180deg, #edf3f8 0%, #fbf9f5 100%);
+        }
+
+        .education-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .education-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            padding: 24px 22px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-xs);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .education-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.25);
+        }
+
+        .education-badge {
+            align-self: flex-start;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--accent);
+            background: var(--bg-accent-soft);
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+            margin-bottom: 14px;
+        }
+
+        .education-card h3 {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.35;
+            margin-bottom: 12px;
+        }
+
+        .education-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ACTIVITIES / KEGIATAN (CAROUSEL DENGAN PANAH DI KANAN KIRI CARD) */
+        .activity-section {
+            background: var(--bg-main);
+        }
+
+        .activity-slider-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .activity-slider-track {
+            display: flex;
+            gap: 22px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding: 12px 6px 20px;
+        }
+
+        .activity-slider-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Panah Melayang Persis di Kiri dan Kanan Card */
+        .activity-side-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 25;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border-light);
+            background: #ffffff;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 18px rgba(24, 55, 86, 0.16);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .activity-side-arrow.prev-arrow {
+            left: -24px;
+        }
+
+        .activity-side-arrow.next-arrow {
+            right: -24px;
+        }
+
+        .activity-side-arrow:hover:not(:disabled) {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 8px 24px rgba(24, 55, 86, 0.26);
+        }
+
+        .activity-side-arrow:disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+            pointer-events: none;
+            box-shadow: none;
+        }
+
+        .activity-card {
+            flex: 0 0 calc((100% - 44px) / 3);
+            scroll-snap-align: start;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px 22px;
+            box-shadow: var(--shadow-xs);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            min-height: 290px;
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.25);
+        }
+
+        .activity-card-top {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .activity-meta svg {
+            width: 14px;
+            height: 14px;
+            color: var(--accent);
+        }
+
+        .activity-card h3.activity-title {
+            font-size: 16.5px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        .activity-org {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+
+        .activity-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .activity-points li {
+            position: relative;
+            padding-left: 15px;
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+        }
+
+        .activity-points li::before {
+            content: '•';
+            position: absolute;
+            left: 2px;
+            top: -1px;
+            color: var(--accent);
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        .activity-tag {
+            align-self: flex-start;
+            margin-top: 18px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--primary-light);
+            background: var(--bg-subtle);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(24, 55, 86, 0.05);
+        }
+
+        /* PORTFOLIO SECTION (CAROUSEL DENGAN PANAH DI KANAN KIRI CARD) */
+        .portfolio-section {
+            background: linear-gradient(180deg, #edf3f8 0%, #fbf9f5 100%);
+        }
+
+        .portfolio-slider-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .portfolio-slider-track {
+            display: flex;
+            gap: 22px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding: 12px 6px 20px;
+        }
+
+        .portfolio-slider-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Panah Melayang Persis di Kiri dan Kanan Card Portofolio */
+        .portfolio-side-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 25;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border-light);
+            background: #ffffff;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 18px rgba(24, 55, 86, 0.16);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .portfolio-side-arrow.prev-arrow {
+            left: -24px;
+        }
+
+        .portfolio-side-arrow.next-arrow {
+            right: -24px;
+        }
+
+        .portfolio-side-arrow:hover:not(:disabled) {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 8px 24px rgba(24, 55, 86, 0.26);
+        }
+
+        .portfolio-side-arrow:disabled {
+            opacity: 0.25;
+            cursor: not-allowed;
+            pointer-events: none;
+            box-shadow: none;
+        }
+
+        .portfolio-card {
+            flex: 0 0 calc((100% - 44px) / 3);
+            scroll-snap-align: start;
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            box-shadow: var(--shadow-xs);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(37, 99, 235, 0.3);
+        }
+
+        .project-image {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background: #e2eaf0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-card:hover .project-image img {
+            transform: scale(1.04);
+        }
+
+        .portfolio-card-content {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-category {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .portfolio-card h3 {
+            font-family: var(--font-heading);
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 18px;
+            flex: 1;
+        }
+
+        /* PROJECT MODAL POPUP */
+        .project-modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 36, 56, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeInModal 0.25s ease forwards;
+        }
+
+        .project-modal-backdrop.active {
+            display: flex;
+        }
+
+        .project-modal {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-light);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            padding: 32px;
+            animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid var(--border-light);
+            background: var(--bg-subtle);
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .modal-content-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 32px;
+            align-items: start;
+            margin-top: 14px;
+        }
+
+        .modal-img-wrap {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+        }
+
+        @keyframes fadeInModal {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUpModal {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            background: var(--bg-main);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xs);
+            transition: all 0.25s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(4px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-accent-soft);
+            color: var(--primary);
+            border-radius: 12px;
+        }
+
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .contact-info-label {
+            display: block;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+
+        .contact-info-val {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .contact-form {
+            padding: 34px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-form h3 {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .contact-form .form-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 7px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1.5px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            background: #fafaf9;
+            font-family: var(--font-sans);
+            font-size: 14px;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-message {
+            font-size: 13px;
+            margin-top: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: auto;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+
+            .about-grid,
+            .education-timeline {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .activity-card,
+            .portfolio-card {
+                flex: 0 0 calc((100% - 22px) / 2);
+            }
+
+            .modal-content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                min-height: 64px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+                border: 1px solid var(--border-light);
+                border-top: none;
+                padding: 12px 20px 20px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+                box-shadow: var(--shadow-md);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                padding: 10px 16px;
+                font-size: 14px;
+                border-radius: var(--radius-sm);
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero .description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image-wrapper {
+                max-width: 290px;
+            }
+
+            .floating-pill {
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+            }
+
+            .about-grid,
+            .education-timeline,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity-card,
+            .portfolio-card {
+                flex: 0 0 100%;
+            }
+
+            .activity-side-arrow,
+            .portfolio-side-arrow {
+                width: 40px;
+                height: 40px;
+            }
+
+            .activity-side-arrow.prev-arrow,
+            .portfolio-side-arrow.prev-arrow {
+                left: -12px;
+            }
+
+            .activity-side-arrow.next-arrow,
+            .portfolio-side-arrow.next-arrow {
+                right: -12px;
+            }
+
+            .contact-form,
+            .project-modal {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header">
+        <div class="navbar">
+            <a href="#beranda" class="logo">
+                <span class="logo-badge">L</span>
+                <span>Lafia Fariha</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <nav id="navMenu">
+                <a href="#beranda" class="active">Beranda</a>
+                <a href="#tentang">Tentang Saya</a>
+                <a href="#pendidikan">Pendidikan</a>
+                <a href="#kegiatan">Kegiatan</a>
+                <a href="#portofolio">Portofolio</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BERANDA (HERO) -->
+        <section id="beranda" class="hero page active">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span>✦ Portofolio & Jurnal Belajar</span>
+                    </div>
+
+                    <h1><span>Lafia</span> Farihatun Nihayah</h1>
+
+                    <p class="description">
+                        Mahasiswa Pendidikan Matematika di Universitas Negeri Malang yang berfokus pada eksplorasi media
+                        pembelajaran interaktif, teknologi edukasi, dan pengembangan potensi diri lewat ruang belajar
+                        yang inspiratif.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#tentang" class="button">
+                            <span>Mengenal Saya</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#portofolio" class="button button-secondary">Lihat Portofolio</a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-backdrop"></div>
+                    <div class="hero-image">
+                        <img src="Images/fotokedua.jpeg" alt="Foto Resmi Lafia Farihatun Nihayah"
+                            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TENTANG SAYA -->
+        <section id="tentang" class="section about-section page">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow-tag">Profil Pribadi</div>
+                    <h2>Tentang Saya</h2>
+                    <p class="section-description">
+                        Mengenal lebih dekat latar belakang, motivasi belajar, minat di dunia pendidikan matematika,
+                        serta keahlian kreatif yang terus saya kembangkan.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Biodata -->
+                    <article class="about-card">
+                        <div class="about-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h3>Biodata Singkat</h3>
+                        <div class="biodata-list">
+                            <div class="biodata-item">
+                                <label>Nama Lengkap</label>
+                                <span>Lafia Farihatun Nihayah</span>
+                            </div>
+                            <div class="biodata-item">
+                                <label>Panggilan</label>
+                                <span>Lafia</span>
+                            </div>
+                            <div class="biodata-item">
+                                <label>Tempat, Tanggal Lahir</label>
+                                <span>Sanggau, 16 Agustus 2005</span>
+                            </div>
+                            <div class="biodata-item">
+                                <label>Pendidikan Saat Ini</label>
+                                <span>S1 Pendidikan Matematika (UM)</span>
+                            </div>
+                            <div class="biodata-item">
+                                <label>Domisili</label>
+                                <span>Malang, Jawa Timur</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Deskripsi Diri -->
+                    <article class="about-card">
+                        <div class="about-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3>Deskripsi Diri</h3>
+                        <p>
+                            Saya adalah pribadi yang memiliki rasa ingin tahu tinggi, senang belajar, serta terbuka
+                            terhadap tantangan baru.
+                        </p>
+                        <p style="margin-top: 10px;">
+                            Selama menjalani studi di perkuliahan, saya aktif mengasah kemampuan akademik sekaligus
+                            melatih soft-skill kepemimpinan dan komunikasi. Bagi saya, setiap proses belajar adalah
+                            investasi untuk masa depan.
+                        </p>
+                    </article>
+
+                    <!-- Hobi & Minat -->
+                    <article class="about-card">
+                        <div class="about-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <h3>Hobi & Minat</h3>
+                        <p>
+                            Di waktu luang, saya gemar membaca literatur inspiratif, menikmati musik, dan menonton karya
+                            sinematik yang membuka wawasan baru.
+                        </p>
+                        <p style="margin-top: 10px;">
+                            Ketertarikan utama saya berada pada irisan antara <strong>pedagogi matematika</strong>,
+                            perancangan media digital interaktif, serta kreasi visual yang menyenangkan untuk siswa.
+                        </p>
+                    </article>
+
+                    <!-- Kemampuan & Tools -->
+                    <article class="about-card">
+                        <div class="about-card-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Keahlian & Tools</h3>
+                        <ul class="skill-tags">
+                            <li>Microsoft Office</li>
+                            <li>Canva Graphic</li>
+                            <li>CapCut Video</li>
+                            <li>Genially Interactive</li>
+                            <li>Wayground</li>
+                            <li>Google Workspace</li>
+                            <li>Media Pembelajaran</li>
+                            <li>Video Editing</li>
+                            <li>Desain Presentasi</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PENDIDIKAN -->
+        <section id="pendidikan" class="section education-section page">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow-tag">Jejak Akademik</div>
+                    <h2>Riwayat Pendidikan</h2>
+                    <p class="section-description">
+                        Perjalanan langkah pendidikan yang telah membentuk fondasi karakter, kecintaan pada ilmu
+                        matematika, dan dedikasi dalam ranah pembelajaran.
+                    </p>
+                </div>
+
+                <div class="education-timeline">
+                    <article class="education-card">
+                        <span class="education-badge">2011 — 2017</span>
+                        <h3>MIN 01 Sanggau</h3>
+                        <p>
+                            Membangun fondasi dasar akademik dan nilai-nilai keislaman, serta mulai aktif mengikuti
+                            kompetisi dan olimpiade matematika tingkat dasar.
+                        </p>
+                    </article>
+
+                    <article class="education-card">
+                        <span class="education-badge">2017 — 2020</span>
+                        <h3>MTsN 01 Sanggau</h3>
+                        <p>
+                            Fase eksplorasi potensi diri, mengasah daya nalar logika, dan konsisten berpartisipasi dalam
+                            berbagai ajang perlombaan matematika.
+                        </p>
+                    </article>
+
+                    <article class="education-card">
+                        <span class="education-badge">2020 — 2023</span>
+                        <h3>MA Unggulan K.H. Abd. Wahab Hasbullah</h3>
+                        <p>
+                            Menempuh pendidikan dengan integrasi keagamaan mendalam, penguasaan literatur kitab kuning,
+                            serta hafalan nadzom di lingkungan pesantren unggulan.
+                        </p>
+                    </article>
+
+                    <article class="education-card">
+                        <span class="education-badge">2023 — Sekarang</span>
+                        <h3>Universitas Negeri Malang</h3>
+                        <p>
+                            Program S1 Pendidikan Matematika, mendalami konstruktivisme pembelajaran matematika,
+                            perancangan kurikulum, dan teknologi media ajar digital.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEGIATAN -->
+        <section id="kegiatan" class="section activity-section page">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow-tag">Pengalaman & Organisasi</div>
+                    <h2>Kegiatan & Keterlibatan</h2>
+                    <p class="section-description">
+                        Rangkaian pengalaman akademik, organisasi mahasiswa, dan kepanitiaan yang telah membentuk
+                        kepemimpinan, komunikasi, serta kerja sama tim.
+                    </p>
+                </div>
+
+                <div class="activity-slider-wrapper">
+                    <!-- Tombol Panah Kiri di Samping Card -->
+                    <button type="button" class="activity-side-arrow prev-arrow" id="activityPrevBtn"
+                        aria-label="Geser ke kiri">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Track Kartu Kegiatan -->
+                    <div class="activity-slider-track" id="activityTrack">
+
+                        <!-- 1. Asistensi Mengajar -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Februari 2026 – Mei 2026</span>
+                                </div>
+                                <h3 class="activity-title">Mahasiswa Asistensi Mengajar 2026</h3>
+                                <p class="activity-org">SMP Laboratorium Universitas Negeri Malang</p>
+                                <ul class="activity-points">
+                                    <li>Melaksanakan pembelajaran matematika melalui perencanaan, pelaksanaan, dan
+                                        evaluasi kegiatan pembelajaran.</li>
+                                    <li>Mengembangkan dan mengimplementasikan media pembelajaran untuk mendukung
+                                        keterlibatan serta pemahaman siswa.</li>
+                                    <li>Mengelola administrasi program, meliputi penyusunan dokumen, pencatatan
+                                        kegiatan, dan pengarsipan berkas.</li>
+                                    <li>Mengoordinasikan kebutuhan administrasi serta komunikasi internal tim selama
+                                        pelaksanaan program.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 2. Staff Humas dan Kominfo -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Agustus 2025 – Mei 2026</span>
+                                </div>
+                                <h3 class="activity-title">Staff Humas dan Kominfo</h3>
+                                <p class="activity-org">HIMMABA Komisariat Universitas Negeri Malang</p>
+                                <ul class="activity-points">
+                                    <li>Mengembangkan materi komunikasi visual organisasi melalui perancangan desain
+                                        publikasi untuk peringatan hari besar dan kebutuhan informasi lainnya.</li>
+                                    <li>Mengoordinasikan pengumpulan serta pendataan foto kepengurusan sebagai kebutuhan
+                                        administrasi dan publikasi organisasi.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 3. Koordinator Sie Acara LKMM-PD -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Juli 2025 – November 2025</span>
+                                </div>
+                                <h3 class="activity-title">Koordinator Sie Acara</h3>
+                                <p class="activity-org">LKMM-PD 2025</p>
+                                <ul class="activity-points">
+                                    <li>Menginisiasi dan mengembangkan konsep kegiatan serta menyusun alur pelaksanaan
+                                        acara secara komprehensif.</li>
+                                    <li>Merancang rubrik penilaian peserta sebagai instrumen evaluasi selama kegiatan.
+                                    </li>
+                                    <li>Mengawasi kedisiplinan peserta dan memastikan pelaksanaan kegiatan berjalan
+                                        sesuai ketentuan.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 4. Ketua Pelaksana UPGRADING -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Januari 2025 – Februari 2025</span>
+                                </div>
+                                <h3 class="activity-title">Ketua Pelaksana</h3>
+                                <p class="activity-org">UPGRADING 2025</p>
+                                <ul class="activity-points">
+                                    <li>Memimpin perencanaan, pengorganisasian, dan pelaksanaan seluruh rangkaian
+                                        kegiatan.</li>
+                                    <li>Mengoordinasikan penyusunan proposal dan laporan pertanggungjawaban kegiatan.
+                                    </li>
+                                    <li>Merumuskan materi dan agenda kegiatan berdasarkan tujuan program kerja.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 5. Wakil Sekretaris Umum HIMATIKA -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Januari 2025 – Desember 2025</span>
+                                </div>
+                                <h3 class="activity-title">Wakil Sekretaris Umum</h3>
+                                <p class="activity-org">HIMATIKA Vektor 2025</p>
+                                <ul class="activity-points">
+                                    <li>Mengoordinasikan agenda rapat kepengurusan untuk mendukung kelancaran komunikasi
+                                        dan koordinasi internal organisasi.</li>
+                                    <li>Melakukan pendampingan dan pemantauan terhadap bidang sesuai pembagian tanggung
+                                        jawab Badan Pengurus Harian.</li>
+                                    <li>Mengawal proses penyusunan proposal kegiatan dan laporan pertanggungjawaban
+                                        setiap bidang.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 6. Koordinator Sie Dekdok ARTLYMPIC -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>September 2024 – Desember 2024</span>
+                                </div>
+                                <h3 class="activity-title">Koordinator Sie Dekorasi & Dokumentasi</h3>
+                                <p class="activity-org">ARTLYMPIC 2024</p>
+                                <ul class="activity-points">
+                                    <li>Mengoordinasikan pembagian tugas dan pelaksanaan tanggung jawab anggota sie.
+                                    </li>
+                                    <li>Mengembangkan kebutuhan publikasi visual melalui desain konten Instagram,
+                                        pamflet, dan media informasi lainnya.</li>
+                                    <li>Bertanggung jawab atas dokumentasi foto dan video selama rangkaian kegiatan.
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 7. Koordinator Sie Jurnalistik & Kesehatan PKM -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Agustus 2024 – November 2024</span>
+                                </div>
+                                <h3 class="activity-title">Koordinator Sie Jurnalistik & Kesehatan</h3>
+                                <p class="activity-org">Seminar dan Follow Up Seminar PKM 2024</p>
+                                <ul class="activity-points">
+                                    <li>Mengoordinasikan pembagian tugas serta memastikan pelaksanaan tanggung jawab
+                                        anggota sie sesuai rencana kegiatan.</li>
+                                    <li>Menyusun artikel pra-kegiatan sebagai sarana penyebarluasan informasi dan
+                                        publikasi seminar.</li>
+                                    <li>Mengelola lini masa publikasi artikel agar penyampaian informasi berjalan sesuai
+                                        jadwal.</li>
+                                    <li>Memantau perkembangan pelaksanaan tugas Sie Pendampingan.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 8. Sekretaris Pelaksana ANJANGKARYA -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Mei 2024 – November 2024</span>
+                                </div>
+                                <h3 class="activity-title">Sekretaris Pelaksana</h3>
+                                <p class="activity-org">ANJANGKARYA 1 dan ANJANGKARYA 2</p>
+                                <ul class="activity-points">
+                                    <li>Bertanggung jawab atas pengelolaan administrasi kegiatan, meliputi penyusunan
+                                        proposal dan laporan pertanggungjawaban.</li>
+                                    <li>Memfasilitasi koordinasi internal melalui penyusunan notulensi dan memimpin
+                                        pelaksanaan rapat.</li>
+                                    <li>Mengelola penjadwalan serta mengoordinasikan agenda rapat panitia dan
+                                        masing-masing sie.</li>
+                                    <li>Memantau progres pelaksanaan tugas Sie Pendampingan.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <!-- 9. Staff Divisi Multimedia HIMATIKA -->
+                        <article class="activity-card">
+                            <div class="activity-card-top">
+                                <div class="activity-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    <span>Februari 2024 – Desember 2024</span>
+                                </div>
+                                <h3 class="activity-title">Staff Divisi Multimedia</h3>
+                                <p class="activity-org">HIMATIKA Vektor 2024</p>
+                                <ul class="activity-points">
+                                    <li>Mengelola dan memelihara konten website resmi HIMATIKA Vektor.</li>
+                                    <li>Mengoordinasikan pelaksanaan open submission sebanyak tiga kali.</li>
+                                    <li>Mengelola publikasi artikel program kerja HIMATIKA Vektor melalui website resmi
+                                        organisasi.</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Tombol Panah Kanan di Samping Card -->
+                    <button type="button" class="activity-side-arrow next-arrow" id="activityNextBtn"
+                        aria-label="Geser ke kanan">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTOFOLIO -->
+        <section id="portofolio" class="section portfolio-section page">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow-tag">Karya & Eksplorasi</div>
+                    <h2>Portofolio Proyek</h2>
+                    <p class="section-description">
+                        Kumpulan hasil karya, prototipe media digital, dan produk kreatif yang saya susun selama proses
+                        studi dan eksplorasi mandiri.
+                    </p>
+                </div>
+
+                <div class="portfolio-slider-wrapper">
+                    <!-- Tombol Panah Kiri di Samping Card -->
+                    <button type="button" class="portfolio-side-arrow prev-arrow" id="portfolioPrevBtn"
+                        aria-label="Geser ke kiri">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <!-- Track Kartu Portofolio -->
+                    <div class="portfolio-slider-track" id="portfolioTrack">
+
+                        <!-- 1. BELA – Belajar Bareng Lumba -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/bela.png" alt="BELA – Belajar Bareng Lumba">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Media Interaktif • Genially</span>
+                                <h3>BELA – Belajar Bareng Lumba</h3>
+                                <p>Pengembangan media pembelajaran matematika interaktif berbasis Genially untuk materi
+                                    jaring-jaring bangun ruang kelas IX SMP dengan pendekatan inquiry serta
+                                    memperhatikan perbedaan gaya belajar siswa.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-1')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 2. KIRANA – Media Pembelajaran Lingkaran -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/kirana.png" alt="KIRANA – Media Pembelajaran Lingkaran">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Media Interaktif • Storyline</span>
+                                <h3>KIRANA – Media Pembelajaran Lingkaran</h3>
+                                <p>Pengembangan media pembelajaran interaktif pada materi lingkaran menggunakan
+                                    Articulate Storyline 3 yang dipublikasikan via GitHub Pages dan diimplementasikan
+                                    langsung di sekolah.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-2')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 3. LKK SPLDV Berbasis Konstruktivisme -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/LKK.png" alt="LKK SPLDV Berbasis Konstruktivisme">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Bahan Ajar • LKK</span>
+                                <h3>LKK SPLDV Berbasis Konstruktivisme</h3>
+                                <p>Penyusunan Lembar Kerja Kelompok (LKK) materi Sistem Persamaan Linear Dua
+                                    Variabel dengan pendekatan konstruktivisme guna memfasilitasi pemahaman konsep
+                                    mandiri.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-3')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 4. Video Penjelasan Model Pembelajaran Problem Based Learning dan Simulasinya-->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/video PBL.png"
+                                    alt="Video Penjelasan Model Pembelajaran Problem Based Learning dan Simulasinya">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Video Pembelajaran • PBL</span>
+                                <h3>Video Penjelasan Model Pembelajaran Problem Based Learning dan Simulasinya</h3>
+                                <p>Pembuatan video edukasi yang memperkenalkan model Problem Based Learning (PBL)
+                                    disertai simulasi penerapan tahapan pembelajaran dalam kegiatan belajar matematika.
+                                </p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-4')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 5. Website Personal Profile -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/website.png" alt="Website Personal Profile">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Pembuatan Website • Wix</span>
+                                <h3>Website Personal Profile</h3>
+                                <p>Pembuatan website sederhana menggunakan Wix sebagai proyek mata kuliah Belajar dan
+                                    Pembelajaran untuk menyajikan profil diri dalam bentuk digital.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-5')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 6. Flashcard 3DIFY -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/3dify.png" alt="Flashcard 3DIFY">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Produk Inovasi • Media Fisik</span>
+                                <h3>Flashcard 3DIFY</h3>
+                                <p>Pengembangan produk inovasi kartu cerdas (flashcard) sebagai alternatif media
+                                    pendukung pembelajaran matematika yang interaktif, visual, dan ringkas bagi siswa.
+                                </p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-6')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 7. Eksplorasi Luas Menggunakan GeoGebra -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/geogebra.jpg"
+                                    alt="Eksplorasi Luas Benda Tidak Beraturan Menggunakan GeoGebra">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Video Eksplorasi • GeoGebra</span>
+                                <h3>Eksplorasi Luas Berbantuan GeoGebra</h3>
+                                <p>Pembuatan video eksplorasi matematika yang membahas perhitungan luas benda tidak
+                                    beraturan berbantuan GeoGebra, mengintegrasikan konsep kalkulus dan komputasi
+                                    dinamis.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-7')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 8. Artikel Ilmiah Pengabdian kepada Masyarakat -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/jurnal.png" alt="Artikel Ilmiah Pengabdian kepada Masyarakat">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Publikasi Ilmiah • LoA</span>
+                                <h3>Artikel Ilmiah Pengabdian Masyarakat</h3>
+                                <p>Penyusunan artikel ilmiah berdasarkan kegiatan pengabdian kepada masyarakat yang
+                                    mendokumentasikan implementasi program dan berhasil memperoleh Letter of Acceptance
+                                    (LoA).</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-8')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 9. Poster Sains Dasar Berkelanjutan -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/sdb1.png" alt="Poster Sains Dasar Berkelanjutan">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Poster Ilmiah • Sains Lingkungan</span>
+                                <h3>Poster Sains Dasar Berkelanjutan</h3>
+                                <p>Poster ilmiah berjudul “Pengaruh Suhu dan Kelembaban terhadap Kenyamanan Termal
+                                    Masyarakat Sekitar Hutan Kota Malang” yang menyajikan riset lingkungan secara visual
+                                    dan informatif.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-9')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 10. Ecorevive Soap – Produk Inovasi Manajemen Inovasi -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/manov1.png" alt="Ecorevive Soap – Produk Inovasi Manajemen Inovasi">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Produk Inovasi • Sustainability</span>
+                                <h3>Ecorevive Soap</h3>
+                                <p>Pengembangan produk inovasi sabun batang dari pemanfaatan minyak jelantah sebagai
+                                    upaya daur ulang limbah rumah tangga menjadi produk bernilai guna tinggi.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-10')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 11. PENA CERDAS – Media Asesmen Pembelajaran Matematika -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/pena cerdas.png"
+                                    alt="PENA CERDAS – Media Asesmen Pembelajaran Matematika">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Media Asesmen • Genially</span>
+                                <h3>PENA CERDAS</h3>
+                                <p>Pengembangan media asesmen digital interaktif berbasis Genially untuk materi
+                                    penyajian dan interpretasi data (diagram batang dan lingkaran) bagi siswa kelas VII.
+                                </p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-11')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 12. Video Studi Kasus Pencacahan dan Teori Graf -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/graph.png" alt="Video Studi Kasus Pencacahan dan Teori Graf">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Video Studi Kasus • Teori Graf</span>
+                                <h3>Studi Kasus Lintasan Teori Graf</h3>
+                                <p>Video pembelajaran penerapan konsep lintasan terpendek (shortest path) teori graf
+                                    dalam menentukan rute perjalanan optimal dari Mie Gacoan Suhat menuju UM.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-12')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                        <!-- 13. Video Praktik Mengajar Matematika Berbahasa Inggris -->
+                        <article class="portfolio-card">
+                            <div class="project-image">
+                                <img src="Images/english.png" alt="Video Praktik Mengajar Matematika Berbahasa Inggris">
+                            </div>
+                            <div class="portfolio-card-content">
+                                <span class="project-category">Praktik Mengajar • Bilingual</span>
+                                <h3>Praktik Mengajar Berbahasa Inggris</h3>
+                                <p>Video praktik pembelajaran matematika dalam bahasa Inggris sebagai bentuk penerapan
+                                    keterampilan pedagogi dan komunikasi instruksional internasional.</p>
+                                <button type="button" class="button button-secondary button-sm"
+                                    onclick="openProjectModal('modal-proyek-13')">Detail Proyek →</button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Tombol Panah Kanan di Samping Card -->
+                    <button type="button" class="portfolio-side-arrow next-arrow" id="portfolioNextBtn"
+                        aria-label="Geser ke kanan">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section id="kontak" class="section contact-section page">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow-tag">Mari Terhubung</div>
+                    <h2>Kontak & Informasi</h2>
+                    <p class="section-description">
+                        Terbuka untuk diskusi akademik, kolaborasi proyek media pembelajaran, atau sekadar bertukar
+                        sapa. Silakan hubungi saya melalui jalur berikut.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-information">
+                        <div class="contact-cards">
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/6282157146187" class="contact-item" target="_blank"
+                                rel="noopener noreferrer">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="contact-info-label">WhatsApp</span>
+                                    <span class="contact-info-val">0821 5714 6187</span>
+                                </div>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://instagram.com/lafiafariha" class="contact-item" target="_blank"
+                                rel="noopener noreferrer">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="contact-info-label">Instagram</span>
+                                    <span class="contact-info-val">@lafiafariha</span>
+                                </div>
+                            </a>
+
+                            <!-- Threads -->
+                            <a href="https://threads.net/@lafiafariha" class="contact-item" target="_blank"
+                                rel="noopener noreferrer">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="4"></circle>
+                                        <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="contact-info-label">Threads</span>
+                                    <span class="contact-info-val">@lafiafariha</span>
+                                </div>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:lafiafariha@gmail.com" class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="contact-info-label">Email Pribadi</span>
+                                    <span class="contact-info-val">lafiafariha@gmail.com</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulir Pesan Otomatis ke Email (Web3Forms) -->
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <h3>Kirimkan Pesan</h3>
+                        <p class="form-subtitle">Tuliskan pesan atau pertanyaan Anda langsung lewat formulir ini.</p>
+
+                        <!-- Konfigurasi Web3Forms -->
+                        <input type="hidden" name="access_key" id="accessKeyInput"
+                            value="3da48938-25c0-41db-87f0-d10c29142a39">
+                        <input type="hidden" name="subject" value="Pesan Baru dari Pengunjung Portofolio">
+                        <input type="hidden" name="from_name" value="Portofolio Lafia">
+
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="name" placeholder="Masukkan nama Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pesan">Pesan Anda</label>
+                            <textarea id="pesan" name="message" rows="4"
+                                placeholder="Tuliskan pesan yang ingin disampaikan..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="button" id="submitBtn" style="width: 100%;">
+                            <span id="btnText">Kirim Sekarang</span>
+                            <svg id="btnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                        <p id="formMessage" class="form-message"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- POPUP MODAL PROYEK 1 -->
+    <div class="project-modal-backdrop" id="modal-proyek-1" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-1')" aria-label="Tutup">✕</button>
+            <span class="project-category">Media Interaktif • Genially</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">BELA – Belajar Bareng Lumba</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/bela.png" alt="BELA – Belajar Bareng Lumba">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pengembangan media pembelajaran matematika interaktif berbasis <strong>Genially</strong> untuk
+                        materi jaring-jaring bangun ruang kelas IX SMP.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Media ini memuat materi dan aktivitas pembelajaran yang dirancang dengan pendekatan
+                        <em>inquiry</em> serta memperhatikan perbedaan gaya belajar siswa guna meningkatkan pemahaman
+                        konsep geometri ruang.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://view.genially.com/674b20c9cb11aa583fa9e776/presentation-media-pembelajaran-bela"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka Media</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 2 -->
+    <div class="project-modal-backdrop" id="modal-proyek-2" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-2')" aria-label="Tutup">✕</button>
+            <span class="project-category">Media Interaktif • Articulate Storyline</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">KIRANA – Media Pembelajaran Lingkaran</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/kirana.png" alt="KIRANA – Media Pembelajaran Lingkaran">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pengembangan media pembelajaran interaktif pada materi lingkaran menggunakan <strong>Articulate
+                            Storyline 3</strong>.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Media dikemas dalam bentuk digital interaktif dan dipublikasikan melalui <strong>GitHub
+                            Pages</strong>, kemudian diimplementasikan secara langsung di lingkungan sekolah untuk
+                        menguji efektivitasnya dalam pembelajaran.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://ajeng-create.github.io/kirana-lingkaran/" target="_blank"
+                            rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka Media</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 3 -->
+    <div class="project-modal-backdrop" id="modal-proyek-3" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-3')" aria-label="Tutup">✕</button>
+            <span class="project-category">Bahan Ajar • LKK Konstruktivisme</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">LKK SPLDV Berbasis Konstruktivisme</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/LKK.png" alt="LKK SPLDV Berbasis Konstruktivisme">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Penyusunan Lembar Kerja Kelompok (LKK) pada materi Sistem Persamaan Linear Dua Variabel
+                        (SPLDV) dengan pendekatan konstruktivisme.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        LKK ini dirancang secara sistematis untuk memandu siswa membangun pemahaman konsep secara
+                        mandiri melalui eksplorasi kegiatan dan penyelesaian permasalahan matematika kontekstual.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/1dV1JZM-LxUAASFXBVC4VdeZIdDgyKcdd/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka LKK</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 4 -->
+    <div class="project-modal-backdrop" id="modal-proyek-4" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-4')" aria-label="Tutup">✕</button>
+            <span class="project-category">Video Pembelajaran • PBL</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Video Penjelasan Model Pembelajaran Problem Based Learning dan
+                Simulasinya</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/video PBL.png"
+                        alt="Video Penjelasan Model Pembelajaran Problem Based Learning dan Simulasinya">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pembuatan video pembelajaran yang memperkenalkan model <strong>Problem Based Learning
+                            (PBL)</strong> dalam konteks pembelajaran matematika.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Disertai simulasi penerapan tahapan-tahapan pembelajaran matematika mulai dari orientasi
+                        masalah, pengorganisasian belajar, penyelidikan mandiri, hingga evaluasi proses pemecahan
+                        masalah.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://youtu.be/7yGYfsvo5TY?si=npgyL6Cn__9kQx4n" target="_blank"
+                            rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka Video</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 5 -->
+    <div class="project-modal-backdrop" id="modal-proyek-5" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-5')" aria-label="Tutup">✕</button>
+            <span class="project-category">Pembuatan Website • Wix</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Website Personal Profile</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/website.png" alt="Website Personal Profile">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pembuatan website sederhana menggunakan <strong>Wix</strong> sebagai proyek mata kuliah
+                        <strong>Belajar dan Pembelajaran</strong>.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Website dikembangkan untuk menyajikan informasi profil diri dalam bentuk digital dengan tampilan
+                        dan navigasi yang disusun sesuai kebutuhan proyek.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://lafiafarihatun2303.wixsite.com/lafiafariha" target="_blank"
+                            rel="noopener noreferrer" class="button button-sm">
+                            <span>Kunjungi Website</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 6 -->
+    <div class="project-modal-backdrop" id="modal-proyek-6" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-6')" aria-label="Tutup">✕</button>
+            <span class="project-category">Produk Inovasi • Media Fisik</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Flashcard 3DIFY</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/3dify.png" alt="Flashcard 3DIFY">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pengembangan produk inovasi berupa kartu pintar (<strong>flashcard</strong>) sebagai media
+                        pendukung pembelajaran matematika.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Produk ini dirancang sebagai alternatif media pembelajaran interaktif yang ringkas dan menarik,
+                        membantu siswa mengingat rumus serta menguasai konsep matematika melalui metode pengulangan
+                        aktif.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/drive/folders/1fAEzyE7uFUFivFICjtEQ43Uzt4uW3UuZ"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka di Google Drive</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 7 -->
+    <div class="project-modal-backdrop" id="modal-proyek-7" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-7')" aria-label="Tutup">✕</button>
+            <span class="project-category">Video Eksplorasi • GeoGebra</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Eksplorasi Luas Benda Tidak Beraturan Menggunakan GeoGebra
+            </h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/geogebra.jpg" alt="Eksplorasi Luas Benda Tidak Beraturan Menggunakan GeoGebra">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pembuatan video eksplorasi matematika yang membahas perhitungan luas benda tidak beraturan
+                        berbantuan perangkat lunak <strong>GeoGebra</strong>.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Proyek ini menggabungkan konsep kalkulus integral (pendekatan jumlah Riemann) dan teknologi
+                        visualisasi dinamis untuk memecahkan dan memvisualisasikan permasalahan matematika di dunia
+                        nyata.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://vt.tiktok.com/ZSgWC7vdM/" target="_blank" rel="noopener noreferrer"
+                            class="button button-sm">
+                            <span>Buka Video</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 8 -->
+    <div class="project-modal-backdrop" id="modal-proyek-8" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-8')" aria-label="Tutup">✕</button>
+            <span class="project-category">Publikasi Ilmiah • LoA</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Artikel Ilmiah Pengabdian kepada Masyarakat</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/jurnal.png" alt="Artikel Ilmiah Pengabdian kepada Masyarakat">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Artikel ini berjudul “Pemanfaatan Limbah Plastik untuk Penanaman Bibit sebagai
+                        Upaya Pelestarian Lingkungan di Desa Pakisjajar”.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Artikel ini membahas pemanfaatan limbah plastik sebagai wadah penanaman bibit
+                        yang dapat menjadi salah satu alternatif dalam mengurangi limbah plastik sekaligus
+                        mendukung kegiatan pelestarian lingkungan. Penulisan artikel ini didasarkan
+                        pada kegiatan pengabdian kepada masyarakat yang dilaksanakan di Desa Pakisjajar.
+                        Artikel telah memperoleh <strong>Letter of Acceptance (LoA)</strong> dari jurnal terakreditasi
+                        SINTA 6.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/drive/folders/1F5KSCNMOjvlV1w0AsLIHJIg6QanPAaUy?usp=sharing"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka di Google Drive</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 9 -->
+    <div class="project-modal-backdrop" id="modal-proyek-9" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-9')" aria-label="Tutup">✕</button>
+            <span class="project-category">Poster Ilmiah • Sains Lingkungan</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Poster Sains Dasar Berkelanjutan</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/sdb.png" alt="Poster Sains Dasar Berkelanjutan">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pembuatan poster ilmiah berjudul <strong>“Pengaruh Suhu dan Kelembaban terhadap Kenyamanan
+                            Termal Masyarakat Sekitar Hutan Kota Malang”</strong>.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Poster ini menyajikan hasil penelitian mengenai hubungan kondisi suhu dan kelembaban lingkungan
+                        dengan kenyamanan termal masyarakat di sekitar Hutan Kota Malang dalam bentuk visual yang
+                        informatif, menarik, dan terstruktur.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/10U3tuMivYVktmWpPuUQ4sTpneO7M8AJg/view?usp=drive_link"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka di Google Drive</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 10 -->
+    <div class="project-modal-backdrop" id="modal-proyek-10" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-10')" aria-label="Tutup">✕</button>
+            <span class="project-category">Produk Inovasi • Sustainability</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Ecorevive Soap – Produk Inovasi Manajemen Inovasi</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/manov.png" alt="Ecorevive Soap – Produk Inovasi Manajemen Inovasi">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pengembangan produk inovasi berupa <strong>Ecorevive Soap</strong>, yaitu produk sabun batang
+                        yang dibuat dengan memanfaatkan minyak jelantah sebagai bahan bakunya.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Proyek ini mengangkat pemanfaatan limbah rumah tangga menjadi produk yang memiliki nilai guna
+                        serta nilai ekonomis, sekaligus mendukung upaya nyata pengurangan pencemaran limbah minyak bekas
+                        bagi kelestarian lingkungan.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/1KzGiqOdvguQAF4rCgCDVC8o9qCPAgUcP/view?usp=sharing"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka di Google Drive</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 11 -->
+    <div class="project-modal-backdrop" id="modal-proyek-11" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-11')" aria-label="Tutup">✕</button>
+            <span class="project-category">Media Asesmen • Genially</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">PENA CERDAS – Media Asesmen Pembelajaran Matematika</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/pena cerdas.png" alt="PENA CERDAS – Media Asesmen Pembelajaran Matematika">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pengembangan media asesmen pembelajaran matematika interaktif berbasis <strong>Genially</strong>
+                        dengan nama <strong>PENA CERDAS</strong>.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Media ini dirancang untuk materi penyajian dan interpretasi data dalam bentuk diagram batang dan
+                        diagram lingkaran. Melalui media ini, siswa dapat berlatih secara aktif untuk memahami,
+                        menyajikan, serta menginterpretasikan data melalui simulasi asesmen digital yang interaktif.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://view.genially.com/67ff60374fca3bbaf5ae0598/presentation-pena-cerdas"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka Media</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 12 -->
+    <div class="project-modal-backdrop" id="modal-proyek-12" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-12')" aria-label="Tutup">✕</button>
+            <span class="project-category">Video Studi Kasus • Teori Graf</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Video Studi Kasus Pencacahan dan Teori Graf</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/graph.png" alt="Video Studi Kasus Pencacahan dan Teori Graf">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pembuatan video pembelajaran yang mengangkat penerapan konsep teori graf dalam menentukan
+                        <em>lintasan terpendek (shortest path)</em> dari Mie Gacoan Suhat menuju Universitas Negeri
+                        Malang.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Video ini menyajikan permasalahan kontekstual di kehidupan sehari-hari yang dimodelkan dan
+                        diselesaikan secara matematis menggunakan konsep graf untuk menemukan rute perjalanan paling
+                        efisien.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/1Wwh3Ae1i-TNRu8x1_9cnhEvXFbkpUnZQ/view?usp=drive_link "
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka Video</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL PROYEK 13 -->
+    <div class="project-modal-backdrop" id="modal-proyek-13" onclick="closeOnBackdrop(event, this)">
+        <div class="project-modal">
+            <button class="modal-close-btn" onclick="closeProjectModal('modal-proyek-13')" aria-label="Tutup">✕</button>
+            <span class="project-category">Praktik Mengajar • Bilingual</span>
+            <h2 style="font-size: 24px; margin-top: 4px;">Video Praktik Mengajar Matematika Berbahasa Inggris</h2>
+            <div class="modal-content-grid">
+                <div class="modal-img-wrap">
+                    <img src="Images/english.png" alt="Video Praktik Mengajar Matematika Berbahasa Inggris">
+                </div>
+                <div>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px;">
+                        Pembuatan video praktik mengajar matematika menggunakan bahasa Inggris sebagai bentuk penerapan
+                        keterampilan mengajar sekaligus kemampuan komunikasi global.
+                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                        Proyek ini mencakup penyampaian materi matematika secara sistematis dengan menggunakan
+                        terminologi, instruksi kelas, dan interaksi pedagogi berbahasa Inggris.
+                    </p>
+                    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/1IIon_lG67BthXH0E3TNCHd9AiP9IbPKl/view?usp=drive_link"
+                            target="_blank" rel="noopener noreferrer" class="button button-sm">
+                            <span>Buka Video</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© <span id="currentYear"></span> Lafia Farihatun Nihayah</p>
+    </footer>
+
+    <script>
+        /* TOGGLE MOBILE MENU */
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        menuToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", navMenu.classList.contains("open"));
+        });
+
+        document.querySelectorAll("#navMenu a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        /* SISTEM NAVIGASI TAB HALAMAN (PINDAH MENU TANPA SCROLL PANJANG) */
+        const pages = document.querySelectorAll("main .page");
+        const navLinks = document.querySelectorAll("#navMenu a");
+
+        function showPage(pageId) {
+            pageId = (pageId || window.location.hash || "beranda").replace("#", "").trim();
+
+            let targetPage = document.getElementById(pageId);
+            if (!targetPage || !targetPage.classList.contains("page")) {
+                pageId = "beranda";
+                targetPage = document.getElementById("beranda");
+            }
+
+            // Tampilkan hanya satu halaman menu yang aktif
+            pages.forEach(function (page) {
+                if (page === targetPage) {
+                    page.classList.add("active");
+                } else {
+                    page.classList.remove("active");
+                }
+            });
+
+            // Update kapsul menu aktif di bilah navigasi atas
+            navLinks.forEach(function (link) {
+                const target = link.getAttribute("href").replace("#", "");
+                link.classList.toggle("active", target === pageId);
+            });
+
+            // Kembalikan posisi tampilan ke bagian paling atas
+            window.scrollTo(0, 0);
+
+            // Perbarui slider jika membuka menu kegiatan atau portofolio
+            if (pageId === "kegiatan" && typeof initActivityInfiniteSlider === "function") {
+                setTimeout(initActivityInfiniteSlider, 50);
+            }
+            if (pageId === "portofolio" && typeof initPortfolioInfiniteSlider === "function") {
+                setTimeout(initPortfolioInfiniteSlider, 50);
+            }
+        }
+
+        // Tangkap klik pada setiap menu navigasi & tombol internal
+        document.addEventListener("click", function (event) {
+            const link = event.target.closest('a[href^="#"]');
+            if (!link) return;
+
+            const href = link.getAttribute("href");
+            if (!href || href === "#") return;
+
+            const targetId = href.replace("#", "");
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement && targetElement.classList.contains("page")) {
+                event.preventDefault();
+                showPage(targetId);
+
+                try {
+                    history.pushState(null, "", "#" + targetId);
+                } catch (e) {
+                    window.location.hash = targetId;
+                }
+
+                if (navMenu && navMenu.classList.contains("open")) {
+                    navMenu.classList.remove("open");
+                    if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
+                }
+            }
+        });
+
+        // Dukungan tombol navigasi Back / Forward browser
+        window.addEventListener("hashchange", function () {
+            showPage(window.location.hash);
+        });
+        window.addEventListener("popstate", function () {
+            showPage(window.location.hash);
+        });
+
+        // Jalankan saat halaman selesai dimuat
+        document.addEventListener("DOMContentLoaded", function () {
+            showPage(window.location.hash);
+        });
+        showPage(window.location.hash);
+
+        /* SLIDER / CAROUSEL KEGIATAN (INFINITE LOOP BERULANG TANPA BATAS) */
+        const activityTrack = document.getElementById("activityTrack");
+        const activityPrevBtn = document.getElementById("activityPrevBtn");
+        const activityNextBtn = document.getElementById("activityNextBtn");
+        let isInfiniteCloned = false;
+
+        function getCardStep() {
+            if (!activityTrack) return 0;
+            const cards = activityTrack.querySelectorAll(".activity-card");
+            if (cards.length < 2) return 0;
+            return cards[1].offsetLeft - cards[0].offsetLeft;
+        }
+
+        function getLoopWidth() {
+            if (!activityTrack) return 0;
+            const cards = activityTrack.querySelectorAll(".activity-card");
+            if (cards.length < 18) return 0;
+            // Jarak persis 1 set (9 kartu)
+            return cards[9].offsetLeft - cards[0].offsetLeft;
+        }
+
+        function initActivityInfiniteSlider() {
+            if (!activityTrack) return;
+
+            const cards = Array.from(activityTrack.querySelectorAll(".activity-card:not(.activity-clone)"));
+            if (cards.length === 0) return;
+
+            // Gandakan 1 set di depan dan 1 set di belakang jika belum pernah diduplikasi
+            if (!isInfiniteCloned && cards.length === 9) {
+                const fragmentBefore = document.createDocumentFragment();
+                cards.forEach(card => {
+                    const clone = card.cloneNode(true);
+                    clone.classList.add("activity-clone");
+                    fragmentBefore.appendChild(clone);
+                });
+                activityTrack.insertBefore(fragmentBefore, cards[0]);
+
+                const fragmentAfter = document.createDocumentFragment();
+                cards.forEach(card => {
+                    const clone = card.cloneNode(true);
+                    clone.classList.add("activity-clone");
+                    fragmentAfter.appendChild(clone);
+                });
+                activityTrack.appendChild(fragmentAfter);
+
+                isInfiniteCloned = true;
+            }
+
+            const loopWidth = getLoopWidth();
+            if (loopWidth > 0) {
+                // Atur posisi awal agar tepat berada di Set tengah (kartu asli pertama)
+                if (activityTrack.scrollLeft === 0 || activityTrack.scrollLeft < loopWidth * 0.4) {
+                    activityTrack.style.scrollBehavior = "auto";
+                    activityTrack.scrollLeft = loopWidth;
+                    activityTrack.offsetHeight;
+                    activityTrack.style.scrollBehavior = "smooth";
+                }
+            }
+        }
+
+        function scrollActivity(direction) {
+            if (!activityTrack) return;
+            const allCards = activityTrack.querySelectorAll(".activity-card");
+            if (allCards.length < 18) return;
+
+            const loopWidth = getLoopWidth();
+            const step = getCardStep();
+            if (loopWidth === 0 || step === 0) return;
+
+            // Sebelum bergeser, lompat ke Set tengah secara instan jika sudah di dekat ujung
+            if (direction > 0 && activityTrack.scrollLeft >= loopWidth * 2 - step) {
+                activityTrack.style.scrollBehavior = "auto";
+                activityTrack.scrollLeft -= loopWidth;
+                activityTrack.offsetHeight;
+                activityTrack.style.scrollBehavior = "smooth";
+            } else if (direction < 0 && activityTrack.scrollLeft <= loopWidth - step) {
+                activityTrack.style.scrollBehavior = "auto";
+                activityTrack.scrollLeft += loopWidth;
+                activityTrack.offsetHeight;
+                activityTrack.style.scrollBehavior = "smooth";
+            }
+
+            activityTrack.scrollBy({
+                left: direction * step,
+                behavior: "smooth"
+            });
+        }
+
+        // Listener jika pengguna menggeser atau swipe sentuh secara manual
+        let infiniteScrollTimer;
+        if (activityTrack) {
+            activityTrack.addEventListener("scroll", function () {
+                clearTimeout(infiniteScrollTimer);
+                infiniteScrollTimer = setTimeout(function () {
+                    const loopWidth = getLoopWidth();
+                    if (loopWidth === 0) return;
+
+                    if (activityTrack.scrollLeft >= loopWidth * 2) {
+                        activityTrack.style.scrollBehavior = "auto";
+                        activityTrack.scrollLeft -= loopWidth;
+                        activityTrack.offsetHeight;
+                        activityTrack.style.scrollBehavior = "smooth";
+                    } else if (activityTrack.scrollLeft <= 40) {
+                        activityTrack.style.scrollBehavior = "auto";
+                        activityTrack.scrollLeft += loopWidth;
+                        activityTrack.offsetHeight;
+                        activityTrack.style.scrollBehavior = "smooth";
+                    }
+                }, 120);
+            });
+        }
+
+        if (activityPrevBtn && activityNextBtn) {
+            activityPrevBtn.addEventListener("click", function () {
+                scrollActivity(-1);
+            });
+            activityNextBtn.addEventListener("click", function () {
+                scrollActivity(1);
+            });
+            window.addEventListener("resize", function () {
+                initActivityInfiniteSlider();
+            });
+            setTimeout(initActivityInfiniteSlider, 200);
+        }
+
+        /* SLIDER / CAROUSEL PORTOFOLIO (INFINITE LOOP BERULANG TANPA BATAS) */
+        const portfolioTrack = document.getElementById("portfolioTrack");
+        const portfolioPrevBtn = document.getElementById("portfolioPrevBtn");
+        const portfolioNextBtn = document.getElementById("portfolioNextBtn");
+        let isPortfolioInfiniteCloned = false;
+        let portfolioSetCountBefore = 2;
+
+        function getPortfolioCardStep() {
+            if (!portfolioTrack) return 0;
+            const cards = portfolioTrack.querySelectorAll(".portfolio-card");
+            if (cards.length < 2) return 0;
+            return cards[1].offsetLeft - cards[0].offsetLeft;
+        }
+
+        function getPortfolioLoopWidth() {
+            if (!portfolioTrack) return 0;
+            const originalCards = portfolioTrack.querySelectorAll(".portfolio-card:not(.portfolio-clone)");
+            const count = originalCards.length;
+            const allCards = portfolioTrack.querySelectorAll(".portfolio-card");
+            if (count === 0 || allCards.length <= count) return 0;
+            return allCards[count].offsetLeft - allCards[0].offsetLeft;
+        }
+
+        function initPortfolioInfiniteSlider() {
+            if (!portfolioTrack) return;
+
+            const cards = Array.from(portfolioTrack.querySelectorAll(".portfolio-card:not(.portfolio-clone)"));
+            if (cards.length === 0) return;
+
+            // Gandakan 2 set kartu di depan dan belakang agar transisi geser selalu mulus
+            if (!isPortfolioInfiniteCloned) {
+                const repeatSets = 2;
+                portfolioSetCountBefore = 2;
+
+                const fragmentBefore = document.createDocumentFragment();
+                for (let r = 0; r < repeatSets; r++) {
+                    cards.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        clone.classList.add("portfolio-clone");
+                        fragmentBefore.appendChild(clone);
+                    });
+                }
+                portfolioTrack.insertBefore(fragmentBefore, cards[0]);
+
+                const fragmentAfter = document.createDocumentFragment();
+                for (let r = 0; r < repeatSets; r++) {
+                    cards.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        clone.classList.add("portfolio-clone");
+                        fragmentAfter.appendChild(clone);
+                    });
+                }
+                portfolioTrack.appendChild(fragmentAfter);
+
+                isPortfolioInfiniteCloned = true;
+            }
+
+            const loopWidth = getPortfolioLoopWidth();
+            if (loopWidth > 0) {
+                const centerTarget = loopWidth * portfolioSetCountBefore;
+                if (portfolioTrack.scrollLeft === 0 || Math.abs(portfolioTrack.scrollLeft - centerTarget) > loopWidth * 1.5) {
+                    portfolioTrack.style.scrollBehavior = "auto";
+                    portfolioTrack.scrollLeft = centerTarget;
+                    portfolioTrack.offsetHeight;
+                    portfolioTrack.style.scrollBehavior = "smooth";
+                }
+            }
+        }
+
+        function scrollPortfolio(direction) {
+            if (!portfolioTrack) return;
+            const allCards = portfolioTrack.querySelectorAll(".portfolio-card");
+            if (allCards.length < 6) return;
+
+            const loopWidth = getPortfolioLoopWidth();
+            const step = getPortfolioCardStep();
+            if (loopWidth === 0 || step === 0) return;
+
+            const centerTarget = loopWidth * portfolioSetCountBefore;
+
+            // Sebelum bergeser, lompat ke Set tengah jika sudah di dekat batas
+            if (direction > 0 && portfolioTrack.scrollLeft >= centerTarget + loopWidth - step) {
+                portfolioTrack.style.scrollBehavior = "auto";
+                portfolioTrack.scrollLeft -= loopWidth;
+                portfolioTrack.offsetHeight;
+                portfolioTrack.style.scrollBehavior = "smooth";
+            } else if (direction < 0 && portfolioTrack.scrollLeft <= centerTarget - loopWidth + step) {
+                portfolioTrack.style.scrollBehavior = "auto";
+                portfolioTrack.scrollLeft += loopWidth;
+                portfolioTrack.offsetHeight;
+                portfolioTrack.style.scrollBehavior = "smooth";
+            }
+
+            portfolioTrack.scrollBy({
+                left: direction * step,
+                behavior: "smooth"
+            });
+        }
+
+        // Listener jika pengguna menggeser atau swipe sentuh secara manual
+        let portfolioInfiniteScrollTimer;
+        if (portfolioTrack) {
+            portfolioTrack.addEventListener("scroll", function () {
+                clearTimeout(portfolioInfiniteScrollTimer);
+                portfolioInfiniteScrollTimer = setTimeout(function () {
+                    const loopWidth = getPortfolioLoopWidth();
+                    if (loopWidth === 0) return;
+                    const centerTarget = loopWidth * portfolioSetCountBefore;
+
+                    if (portfolioTrack.scrollLeft >= centerTarget + loopWidth) {
+                        portfolioTrack.style.scrollBehavior = "auto";
+                        portfolioTrack.scrollLeft -= loopWidth;
+                        portfolioTrack.offsetHeight;
+                        portfolioTrack.style.scrollBehavior = "smooth";
+                    } else if (portfolioTrack.scrollLeft <= centerTarget - loopWidth) {
+                        portfolioTrack.style.scrollBehavior = "auto";
+                        portfolioTrack.scrollLeft += loopWidth;
+                        portfolioTrack.offsetHeight;
+                        portfolioTrack.style.scrollBehavior = "smooth";
+                    }
+                }, 120);
+            });
+        }
+
+        if (portfolioPrevBtn && portfolioNextBtn) {
+            portfolioPrevBtn.addEventListener("click", function () {
+                scrollPortfolio(-1);
+            });
+            portfolioNextBtn.addEventListener("click", function () {
+                scrollPortfolio(1);
+            });
+            window.addEventListener("resize", function () {
+                initPortfolioInfiniteSlider();
+            });
+            setTimeout(initPortfolioInfiniteSlider, 200);
+        }
+
+        /* MODAL PROYEK */
+        function openProjectModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add("active");
+                document.body.style.overflow = "hidden";
+            }
+        }
+
+        function closeProjectModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+        }
+
+        function closeOnBackdrop(event, element) {
+            if (event.target === element) {
+                element.classList.remove("active");
+                document.body.style.overflow = "";
+            }
+        }
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                document.querySelectorAll(".project-modal-backdrop.active").forEach(function (modal) {
+                    modal.classList.remove("active");
+                });
+                document.body.style.overflow = "";
+            }
+        });
+
+        /* TAHUN OTOMATIS */
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+        /* FORMULIR KIRIM PESAN LANGSUNG KE EMAIL (WEB3FORMS + GMAIL WEB FALLBACK) */
+        const contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const submitBtn = document.getElementById("submitBtn");
+            const btnText = document.getElementById("btnText");
+            const msg = document.getElementById("formMessage");
+            const accessKeyInput = document.getElementById("accessKeyInput");
+            const accessKey = accessKeyInput ? accessKeyInput.value.trim() : "";
+
+            const nama = document.getElementById("nama").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const pesan = document.getElementById("pesan").value.trim();
+
+            if (!nama || !email || !pesan) {
+                msg.textContent = "Silakan lengkapi semua kolom.";
+                msg.style.color = "#dc2626";
+                return;
+            }
+
+            // Jika Access Key Web3Forms belum dimasukkan, sediakan tombol langsung buka Gmail Web
+            if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
+                const subject = encodeURIComponent("Pesan Portofolio dari " + nama);
+                const body = encodeURIComponent("Halo Lafia,\n\nNama: " + nama + "\nEmail: " + email + "\n\nPesan:\n" + pesan);
+                const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=lafiafariha@gmail.com&su=" + subject + "&body=" + body;
+
+                msg.innerHTML = "Access Key belum diisi. <a href='" + gmailUrl + "' target='_blank' style='text-decoration: underline; color: #2563eb; font-weight: 700;'>Klik di sini untuk langsung kirim via Gmail Web</a>.";
+                msg.style.color = "#2563eb";
+                return;
+            }
+
+            // Proses kirim otomatis via Web3Forms
+            submitBtn.disabled = true;
+            btnText.textContent = "Mengirim Pesan...";
+            msg.textContent = "";
+
+            try {
+                const formData = new FormData(contactForm);
+                const json = JSON.stringify(Object.fromEntries(formData));
+
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: json
+                });
+
+                const result = await response.json();
+
+                if (response.status === 200 && result.success) {
+                    msg.textContent = "✓ Pesan Anda berhasil terkirim! Terima kasih.";
+                    msg.style.color = "#10b981";
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.message || "Gagal mengirim");
+                }
+            } catch (error) {
+                const subject = encodeURIComponent("Pesan Portofolio dari " + nama);
+                const body = encodeURIComponent("Nama: " + nama + "\nEmail: " + email + "\n\nPesan:\n" + pesan);
+                const gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=lafiafariha@gmail.com&su=" + subject + "&body=" + body;
+
+                msg.innerHTML = "Gagal kirim otomatis. <a href='" + gmailUrl + "' target='_blank' style='text-decoration: underline; color: #2563eb; font-weight: 700;'>Kirim pesan langsung via Gmail Web</a>.";
+                msg.style.color = "#dc2626";
+            } finally {
+                submitBtn.disabled = false;
+                btnText.textContent = "Kirim Sekarang";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
